@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Type" charset="utf-8">
 		<title>Oren is Going to India in...</title>
 		<meta name="author" content="Oren Itamar" />
-		<script src="countdown.js"></script>
+		<link rel="stylesheet" href="style.css" />
 		<link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+		<script src="countdown.js"></script>
 	</head>
+	
 	<body>
 		
-		<h1 id="text" style="font-family: 'Francois One', sans-serif;">Oren is going to India in...</h1>
-		<h1 id="counter" style="font-family: 'Francois One', sans-serif;"></h1>
+		<h1 class="bigText" id="title">Oren is going to India in...</h1>
+		<h2 class="bigText" id="counter"></h1>
 		<script>
 		countdown();
 		setInterval(countdown,1000);
 		</script>
+		
 	</body>
 </html>
