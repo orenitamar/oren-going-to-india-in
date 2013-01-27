@@ -5,6 +5,7 @@ body {
 	font-family: Geneva, Verdana, sans-serif;
 	padding: 0;
 	margin: 0;
+	
 }
 
 #main {
@@ -33,15 +34,6 @@ body {
 }
 
 #counter {
-	background: -webkit-linear-gradient(top, hsl(300, 5%, 12%), hsl(300, 5%, 19%));
-	background: -moz-linear-gradient(top, hsl(300, 5%, 12%), hsl(300, 5%, 19%));
-	box-shadow: 0 2px 5px 1px hsla(160, 13%, 2%, .4),
-				0 -2px 4px hsla(160, 13%, 96%, .2);
-	
-	border: 0px solid hsla(160, 33%, 96%, .4);
-	border-top: 0;
-	border-radius: 5px;
-	
 	list-style-type: none;
 	text-align: center;
 	
@@ -50,9 +42,15 @@ body {
 }
 
 .time {
+	background: -webkit-linear-gradient(top, hsl(300, 5%, 11%), hsl(300, 5%, 18%));
+	background: -moz-linear-gradient(top, hsl(300, 5%, 11%), hsl(300, 5%, 18%));
+
+	width: 120px;
+	height: 115px;
 	position: relative;
 	display: inline-block;
 	padding: 0px;
+	margin: 0 -2px;
 }
 
 .timeUnitNumber {
@@ -64,11 +62,11 @@ body {
 	margin: 0;
 }
 
-.time:not(:last-of-type) .timeUnitNumber:after {
+/*.time:not(:last-of-type) .timeUnitNumber:after {
 	content: ':';
 	position: relative;
 	margin-right: -8px;
-}
+}*/
 
 .timeUnitName {
 	color: #aaa;
@@ -76,7 +74,5 @@ body {
 	font-style: normal;
 	
 	text-align: center;
-	position: absolute;
-	bottom: -6px;
-	left: 30px;
+	position: relative;
 }
