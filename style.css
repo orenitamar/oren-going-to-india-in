@@ -3,7 +3,6 @@ body {
 	background-size:  cover;
 	
 	font-family: Geneva, Verdana, sans-serif;
-
 	padding: 0;
 	margin: 0;
 }
@@ -28,12 +27,14 @@ body {
 	padding: 22px 8px;
 	margin: 0 auto 10px;
 	
+	font-weight: normal;
 	color: hsl(160, 30%, 97%);
-	text-shadow: 0px 0px 4px hsla(300, 5%, 7.8%, .2);
+	text-shadow: 0px 0px 4px hsla(300, 5%, 7.8%, .3);
 }
 
 #counter {
 	background: -webkit-linear-gradient(top, hsl(300, 5%, 12%), hsl(300, 5%, 19%));
+	background: -moz-linear-gradient(top, hsl(300, 5%, 12%), hsl(300, 5%, 19%));
 	box-shadow: 0 2px 5px 1px hsla(160, 13%, 2%, .4),
 				0 -2px 4px hsla(160, 13%, 96%, .2);
 	
