@@ -1,5 +1,5 @@
 body {
-	background: url(img/airportwait.jpg) no-repeat center center fixed; /* from: http://www.sxc.hu/photo/1081655/ */
+	background: url(img/indiarik.jpg) no-repeat center center fixed; /* from: http://www.sxc.hu/photo/1081655/ */
 	background-size:  cover;
 	
 	font-family: Geneva, Verdana, sans-serif;
@@ -10,7 +10,7 @@ body {
 
 #main {
 	position: absolute;
-	top: 24%;
+	top: 30%;
 	left: 50%;	
 	
 	width: 500px;
@@ -29,8 +29,8 @@ body {
 	margin: 0 auto 10px;
 	
 	font-weight: normal;
-	color: hsl(160, 30%, 97%);
-	text-shadow: 0px 0px 4px hsla(300, 5%, 7.8%, .3);
+	color: hsla(160, 30%, 97%, .95);
+	text-shadow: 0px 0px 4px hsla(10.43, 65.71%, 6%, .3);
 }
 
 #counter {
@@ -42,8 +42,7 @@ body {
 }
 
 .time {
-	background: -webkit-linear-gradient(top, hsl(300, 5%, 11%), hsl(300, 5%, 18%));
-	background: -moz-linear-gradient(top, hsl(300, 5%, 11%), hsl(300, 5%, 18%));
+	box-shadow: 0px 3px 6px hsla(10.43, 45%, 18%,.0);
 
 	width: 120px;
 	height: 115px;
@@ -51,10 +50,12 @@ body {
 	display: inline-block;
 	padding: 0px;
 	margin: 0 -2px;
+	background-image: -webkit-linear-gradient(top, hsl(185, 47%, 48%), hsl(185, 47%, 43%));
+	background-image: -moz-linear-gradient(top, hsl(185, 47%, 48%), hsl(185, 47%, 43%));
 }
 
 .timeUnitNumber {
-	color: #eee;
+	color: #efefef;
 	font-family: 'Monaco';
 	font-size: 4em;
 	
@@ -69,8 +70,8 @@ body {
 }*/
 
 .timeUnitName {
-	color: #aaa;
-	font-size: .8em;
+	color: hsl(185, 47%, 21%);
+	font-size: .9em;
 	font-style: normal;
 	
 	text-align: center;
