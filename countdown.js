@@ -2,7 +2,7 @@ var now = new Date();
 var departure = new Date("2013-03-21T07:50:00Z");
 var time_to_departure = (departure - now)/1000 ;
 
-function isSingleDigit(number) {
+function handleNumber(number) {
 	if (number.toString().length === 1) {
 		number = "0" + number;
 	}
@@ -16,10 +16,10 @@ function countdown(){
 		hours = Math.floor((time_to_departure % 86400)/3600);
 		minutes = Math.floor((time_to_departure % 3600)/60)
 		seconds = Math.floor(time_to_departure % 60);
-		document.getElementById("daysNumber").innerHTML = isSingleDigit(days);
-		document.getElementById("hoursNumber").innerHTML = isSingleDigit(hours);
-		document.getElementById("minutesNumber").innerHTML = isSingleDigit(minutes);
-		document.getElementById("secondsNumber").innerHTML = isSingleDigit(seconds);
+		document.getElementById("daysNumber").innerHTML = handleNumber(days);
+		document.getElementById("hoursNumber").innerHTML = handleNumber(hours);
+		document.getElementById("minutesNumber").innerHTML = handleNumber(minutes);
+		document.getElementById("secondsNumber").innerHTML = handleNumber(seconds);
 		
 	}else{
 		document.getElementById("text").innerHTML = "Oren is already in India, probably eating chicken biryani...";

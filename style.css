@@ -67,7 +67,7 @@ body {
 .time:not(:last-of-type) .timeUnitNumber:after {
 	content: ':';
 	position: relative;
-	margin-right: -12px;
+	margin-right: -8px;
 }
 
 .timeUnitName {
