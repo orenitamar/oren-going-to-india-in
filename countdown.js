@@ -2,6 +2,13 @@ var now = new Date();
 var departure = new Date("2013-03-21T07:50:00Z");
 var time_to_departure = (departure - now)/1000 ;
 
+function handleNumber(number) {
+	if (number.toString().length === 1) {
+		number = "0" + number;
+	}
+	return number;
+}
+
 function countdown(){
 	if (time_to_departure>0){	
 		time_to_departure -= 1;
@@ -9,7 +16,11 @@ function countdown(){
 		hours = Math.floor((time_to_departure % 86400)/3600);
 		minutes = Math.floor((time_to_departure % 3600)/60)
 		seconds = Math.floor(time_to_departure % 60);
-		document.getElementById("counter").innerHTML = days+" Days "+hours+" Hours "+minutes+" Minutes "+seconds+" Seconds";
+		document.getElementById("daysNumber").innerHTML = handleNumber(days);
+		document.getElementById("hoursNumber").innerHTML = handleNumber(hours);
+		document.getElementById("minutesNumber").innerHTML = handleNumber(minutes);
+		document.getElementById("secondsNumber").innerHTML = handleNumber(seconds);
+		
 	}else{
 		document.getElementById("text").innerHTML = "Oren is already in India, probably eating chicken biryani...";
 	}
