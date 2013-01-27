@@ -10,9 +10,27 @@
 	</head>
 	
 	<body>
-		
-		<h1 class="bigText" id="title">Oren is going to India in...</h1>
-		<h2 class="bigText" id="counter"></h1>
+		<header id="main">
+			<h1 class="bigText" id="title">Oren is going to India in</h1>
+			<ul id="counter">
+				<li class="time" id="days">
+					<div class="timeUnitNumber" id="daysNumber"></div>
+					<div class="timeUnitName">Day</div>
+				</li>
+				<li class="time" id="hours">
+					<div class="timeUnitNumber" id="hoursNumber"></div>
+					<div class="timeUnitName">Hrs</div>
+				</li>
+				<li class="time" id="minutes">
+					<div class="timeUnitNumber" id="minutesNumber"></div>
+					<div class="timeUnitName">Min</div>
+				</li>
+				<li class="time" id="seconds">
+					<div class="timeUnitNumber" id="secondsNumber"></div>
+					<div class="timeUnitName">Sec</div>
+				</li>
+			</ul>
+		<header>
 		<script>
 		countdown();
 		setInterval(countdown,1000);
