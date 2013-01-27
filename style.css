@@ -35,8 +35,7 @@ body {
 #counter {
 	background: -webkit-linear-gradient(top, hsl(300, 5%, 12%), hsl(300, 5%, 19%));
 	box-shadow: 0 2px 5px 1px hsla(160, 13%, 2%, .4),
-				0 -2px 4px hsla(160, 13%, 96%, .2)
-	;
+				0 -2px 4px hsla(160, 13%, 96%, .2);
 	
 	border: 0px solid hsla(160, 33%, 96%, .4);
 	border-top: 0;
@@ -53,7 +52,6 @@ body {
 	position: relative;
 	display: inline-block;
 	padding: 0px;
-	
 }
 
 .timeUnitNumber {
