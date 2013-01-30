@@ -20,6 +20,7 @@ function countdown(){
 		document.getElementById("hoursNumber").innerHTML = handleNumber(hours);
 		document.getElementById("minutesNumber").innerHTML = handleNumber(minutes);
 		document.getElementById("secondsNumber").innerHTML = handleNumber(seconds);
+		document.title = days+'d:'+hours+'h:'+minutes'm:'+seconds+'s'
 		
 	}else{
 		document.getElementById("text").innerHTML = "Oren is already in India, probably eating chicken biryani...";
