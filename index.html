@@ -1,44 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" charset="utf-8">
 		<title>Oren is Going to India in...</title>
+
 		<meta name="author" content="Oren Itamar" />
-		<link rel="stylesheet" href="style.css" />
-		<link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/style.css" />
 
 		<meta property="og:title" content="Oren going to India in..." />
         <meta property="og:image" content="img/oren.jpg" />
 
-		<script src="countdown.js"></script>
+        <link href="http://fonts.googleapis.com/css?family=Princess+Sofia" rel="stylesheet" type="text/css">
+
 	</head>
 	
 	<body>
-		<header id="main">
-			<h1 class="bigText" id="title">Oren is going to India in</h1>
-			<ul id="counter">
-				<li class="time" id="days">
-					<div class="timeUnitNumber" id="daysNumber"></div>
-					<div class="timeUnitName">Day</div>
-				</li>
-				<li class="time" id="hours">
-					<div class="timeUnitNumber" id="hoursNumber"></div>
-					<div class="timeUnitName">Hrs</div>
-				</li>
-				<li class="time" id="minutes">
-					<div class="timeUnitNumber" id="minutesNumber"></div>
-					<div class="timeUnitName">Min</div>
-				</li>
-				<li class="time" id="seconds">
-					<div class="timeUnitNumber" id="secondsNumber"></div>
-					<div class="timeUnitName">Sec</div>
-				</li>
-			</ul>
-		<header>
-		<script>
-			update();
-			setInterval(update, 1000);
-		</script>
-		
+		<header>Loading..</header>
+		<section>
+			<div id="insta"></div>
+			<div id="twitter">
+				<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/oreni" data-widget-id="315160786173566976">Tweets by @oreni</a>
+			</div>
+		</section>
+		<footer>
+			<div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false"></div>
+			<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+			<div id="fb-root"></div>
+		</footer>
 	</body>
+
+	<script type="text/x-handlebars-template" id="insta-item">
+		<ul>
+			{{#each data}}
+			<li>
+				<a href="{{link}}" target="_blank">
+					<img src="{{images.low_resolution.url}}" alt="{{caption.text}}" />
+				</a>
+				<p>{{caption.text}}</p>
+				<span>
+					{{#if created_time}}
+					<time>{{#timeago}}{{created_time}}{{/timeago}}</time>
+					{{/if}}
+					{{#if location.name}}
+					<address>{{location.name}}</address>
+					{{/if}}
+				</span>
+			</li>
+			{{/each}}
+		</ul>
+	</script>
+
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="js/moment.min.js"></script>
+	<script src="js/handlebars.js"></script>
+	<script src="js/feed.js"></script>
+
+	<script>
+		new Phrase({
+			"phrases": [
+				"Oren has been doing absolutely nothing for the last {{time}}",
+				"Oren has been coding from India for the last {{time}}",
+				"Oren has left the building (Kardan) {{time}} ago",
+				"Oren is gradually turning into a dolphin for {{time}} now",
+				"Oren has been taking up tabla lessons since {{time}} ago"
+			],
+			"elSelector": "header"
+		});
+
+		new Insta({
+			"url": "http://instaphotos.flyapps.me/services/search.php?action=get_recent_media_by_user&max_id=0%20&q=2918470",
+			"elSelector": "#insta",
+			"tmplSelector": "#insta-item"
+		});
+
+		$.getScript("//platform.twitter.com/widgets.js");
+	</script>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=435462409848844";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </html>
+
