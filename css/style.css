@@ -7,24 +7,16 @@ ul {
 }
 body {
 	font-family: arial;
-	margin-top: 102px;
 	background: url(../img/bg.jpg) no-repeat center center fixed; /* from: http://www.sxc.hu/photo/1081655/ */
 	background-size:  cover;
-
 }
 header {
-	height: 102px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background-color: rgba(0,0,0,.67);
 	color: white;
-	font-size: 38px;
+	font-size: 43px;
 	font-family: 'Princess Sofia', cursive;
-	text-align: center;
-	line-height: 102px;
-	z-index: 3;
+	position: relative;
+	top: -9px;
+	margin-bottom: 14px;
 }
 section {
 	padding-top: 31px;
@@ -35,10 +27,13 @@ section {
 }
 
 #insta {
-	float: left;
+	float: right;
 	line-height: 23px;
 	font-style: normal;
 	width: 306px;
+}
+#insta li[data-is-india='false'] {
+	display: none;
 }
 #insta li {
 	height: 370px;
@@ -72,21 +67,25 @@ time {
 	background-position: left -24px;
 	margin-right: 4px;
 }
-#twitter iframe {
+#twitter {
 	position: fixed;
-	right: 50%;
-	margin-right: -410px;
+	left: 50%;
+	margin-left: -410px;
 	width: 457px;
 }
 a.twitter-timeline {
 	display: none;
 }
-
 footer {
 	position: fixed;
-	top: 545px;
+	bottom: 10px;
 	left: 50%;
-	margin-left: -45px;
+	margin-left: -410px;
+}
+@media screen and (max-height: 610px) {
+    footer {
+    	top: 578px;
+    }
 }
 .fb_iframe_widget{
 	top: -3px;
