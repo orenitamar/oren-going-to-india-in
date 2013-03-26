@@ -52,7 +52,7 @@ function Phrase(cfg) {
 		template = Handlebars.compile(source);
 
 	var html = template({
-		"date": new Date("2013-03-21T07:50:00Z")/1000
+		"date": cfg.departure
 	});
 
 	$el.html(html);
@@ -66,4 +66,8 @@ Handlebars.registerHelper('time', function() {
 Handlebars.registerHelper('timeago', function() {
 	var time = this.created_time? moment.unix(this.created_time).fromNow() : "";
 	return time;
+});
+
+Handlebars.registerHelper('is_india', function() {
+	return this.created_time > departure.getTime()/1000 ? 'true' : 'false';
 });
